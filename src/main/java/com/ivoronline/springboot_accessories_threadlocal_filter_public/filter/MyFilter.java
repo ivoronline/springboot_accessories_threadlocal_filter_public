@@ -16,8 +16,9 @@ public class MyFilter implements Filter {
     try {
     
       //GET URL PARAMETERS
-      String  user = request.getParameter("user");
-      Integer age  = Integer.valueOf(request.getParameter("age"));
+      String  user      = request.getParameter("user");
+      String  ageString = request.getParameter("age" ); //http://localhost:8080/favicon.ico
+      Integer age       = ageString == null ? null : Integer.valueOf(ageString);
       
       //SET THREAD CONTEXT PARAMETERS
       ThreadContext.user.set(user);
@@ -33,11 +34,5 @@ public class MyFilter implements Filter {
       System.out.println("Thread Context Cleared");
     }
   }
-  
-  @Override
-  public void init(FilterConfig filterConfig) throws ServletException { }
-  
-  @Override
-  public void destroy() { }
   
 }

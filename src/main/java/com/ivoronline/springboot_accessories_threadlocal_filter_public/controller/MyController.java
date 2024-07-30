@@ -17,7 +17,7 @@ public class MyController {
   //=========================================================================================================
   @RequestMapping("withThreadLocal")
   String withThreadLocal() {
-    return myService.withThreadLocal();
+    return myService.withThreadLocal(); //No Input Parameters Needed
   }
 
   //=========================================================================================================

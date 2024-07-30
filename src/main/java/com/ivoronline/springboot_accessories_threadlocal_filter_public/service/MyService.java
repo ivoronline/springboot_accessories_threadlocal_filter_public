@@ -9,7 +9,7 @@ public class MyService {
   //=========================================================================================================
   // WITH THREAD LOCAL
   //=========================================================================================================
-  public String withThreadLocal() {            // No Input Parameter Needed
+  public String withThreadLocal() {            //No Input Parameters Needed
     String  user = ThreadContext.user.get();
     Integer age  = ThreadContext.age .get();
     return user + " is " + age + " years old";
